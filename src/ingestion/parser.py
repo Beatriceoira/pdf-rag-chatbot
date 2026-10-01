@@ -59,8 +59,7 @@ def parse_pdf_from_bytes(file_bytes: bytes, filename: str) -> tuple[list[LCDocum
     meta.compute_hash(BytesIO(file_bytes))
 
     try:
-        bio = BytesIO(file_bytes)
-        loader = PyPDFLoader(str(bio))
+        loader = PyPDFLoader(BytesIO(file_bytes))
         docs = loader.load()
     except Exception as exc:
         logger.error("Failed to parse in-memory PDF '%s': %s", filename, exc)

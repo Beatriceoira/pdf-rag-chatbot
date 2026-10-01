@@ -1,0 +1,84 @@
+{
+  "system_info": {
+    "timestamp": "2026-10-01T19:55:32.984589Z",
+    "python_version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "platform": "linux",
+    "cpu_count": 12,
+    "memory_total_gb": 15.0,
+    "process_id": 223151
+  },
+  "configuration": {
+    "qdrant_mode": "local",
+    "embedding_provider": "local",
+    "llm_provider": "openai",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "retrieval_k": 5
+  },
+  "benchmarks": {
+    "ingestion": {
+      "validation": {
+        "min": 6.050999218132347e-06,
+        "max": 1.4057004591450095e-05,
+        "mean": 9.27766814129427e-06,
+        "median": 7.72500061430037e-06
+      },
+      "parsing": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "chunking": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "embedding": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "vector_insertion": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "total": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "iterations": 3,
+      "successful_runs": 0
+    },
+    "retrieval": {
+      "query_embedding_latency_ms": {
+        "mean": 3.7386054995295126,
+        "p50": 3.816491000179667,
+        "p95": 4.667037996114232,
+        "p99": 4.667037996114232
+      },
+      "vector_search_latency_ms": {
+        "mean": 3.823281500081066,
+        "p50": 3.8991370020085014,
+        "p95": 4.1344380006194115,
+        "p99": 4.1344380006194115
+      },
+      "total_retrieval_latency_ms": {
+        "mean": 7.562347700877581,
+        "p50": 7.461351000529248,
+        "p95": 8.735091003472917,
+        "p99": 8.735091003472917
+      },
+      "iterations_per_query": 5,
+      "total_queries": 2,
+      "total_measurements": 10,
+      "note": "The vector search latency includes an additional query embedding step (so total retrieval latency is not exactly the sum of the two)."
+    }
+  }
+}

@@ -71,13 +71,16 @@ class EvaluationRunner:
         self._chat = chat_service
         self._metrics = RetrievalMetrics()
 
-    def evaluate(self, dataset: list[dict], k: int = 5) -> list[EvaluationResult]:
+    def evaluate(self, dataset: list[dict], k: int = 5, conversation_id: str = None) -> list[EvaluationResult]:
         """Evaluate the RAG system against a test dataset.
 
         Each dataset item should have:
           - question: str
           - expected_answer: str (optional)
           - expected_sources: list[str] (optional, e.g. ["doc.pdf:3"])
+
+        If conversation_id is provided, the same conversation is used for all queries.
+        If conversation_id is None, a new conversation is created for each query.
         """
         results = []
         for item in dataset:
@@ -85,8 +88,15 @@ class EvaluationRunner:
             expected_answer = item.get("expected_answer", "")
             expected_sources = item.get("expected_sources", [])
 
+            # Determine the conversation ID to use for this query
+            if conversation_id is not None:
+                conv_id = conversation_id
+            else:
+                # Create a new conversation for this query
+                conv_id = self._chat.memory.create_conversation("eval")
+
             # Run the chat service
-            response = self._chat.ask(question, conversation_id="__eval__")
+            response = self._chat.ask(question, conv_id)
 
             # Parse retrieved sources
             retrieved_docs = [f"{s.get('document_name', '?')}:{s.get('page_number', '?')}" for s in response.sources]

@@ -1,0 +1,54 @@
+{
+  "system_info": {
+    "timestamp": "2026-10-01T20:07:51.893783+00:00",
+    "python_version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "platform": "linux",
+    "cpu_count": 12,
+    "memory_total_gb": 15.0,
+    "process_id": 228534
+  },
+  "configuration": {
+    "qdrant_mode": "local",
+    "embedding_provider": "local",
+    "llm_provider": "openai",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "retrieval_k": 5
+  },
+  "benchmarks": {
+    "ingestion": {
+      "total_time_seconds": {
+        "min": 0.01095825299853459,
+        "max": 4.581151045997103,
+        "mean": 1.5343884986674918,
+        "median": 0.011056197006837465
+      },
+      "iterations": 3,
+      "successful_runs": 3
+    },
+    "retrieval": {
+      "query_embedding_latency_ms": {
+        "mean": 3.445942301186733,
+        "p50": 3.2810470002004877,
+        "p95": 4.132043999561574,
+        "p99": 4.132043999561574
+      },
+      "vector_search_latency_ms": {
+        "mean": 3.69493829930434,
+        "p50": 3.5267979983473197,
+        "p95": 4.658942998503335,
+        "p99": 4.658942998503335
+      },
+      "total_retrieval_latency_ms": {
+        "mean": 7.141329901787685,
+        "p50": 6.796303998271469,
+        "p95": 8.791528001893312,
+        "p99": 8.791528001893312
+      },
+      "iterations_per_query": 5,
+      "total_queries": 2,
+      "total_measurements": 10,
+      "note": "The vector search latency includes an additional query embedding step (so total retrieval latency is not exactly the sum of the two)."
+    }
+  }
+}

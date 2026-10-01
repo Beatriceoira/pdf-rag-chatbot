@@ -1,0 +1,115 @@
+{
+  "results": [
+    {
+      "question": "How many vacation days are provided per year?",
+      "expected_answer": "20 days",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "company_policy.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "question": "What is the sick leave policy?",
+      "expected_answer": "Sick leave is available up to 10 days per year.",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "company_policy.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "question": "What is the return policy for Product X?",
+      "expected_answer": "Product X has a 30-day return policy.",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "product_manual.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "question": "What is the warranty period for Product X?",
+      "expected_answer": "Warranty covers manufacturing defects for 1 year.",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "product_manual.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "question": "What is the employee dress code?",
+      "expected_answer": "The dress code is business casual.",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "employee_handbook.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "question": "What are the office hours?",
+      "expected_answer": "Office hours are 9 AM to 5 PM, Monday through Friday.",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "employee_handbook.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "question": "When is remote work available?",
+      "expected_answer": "Remote work is available on Wednesdays.",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "employee_handbook.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "question": "What is the contact email for support?",
+      "expected_answer": "Contact support at support@example.com for issues.",
+      "actual_answer": "I couldn't find any relevant information in the uploaded documents.",
+      "expected_sources": [
+        "product_manual.pdf:1"
+      ],
+      "retrieved_documents": [],
+      "hit_at_k": false,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "mrr": 0.0
+    }
+  ],
+  "summary": {
+    "total_questions": 8,
+    "hit_rate": 0.0,
+    "avg_precision": 0.0,
+    "avg_recall": 0.0,
+    "avg_mrr": 0.0
+  }
+}

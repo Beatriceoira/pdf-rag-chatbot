@@ -1,0 +1,84 @@
+{
+  "system_info": {
+    "timestamp": "2026-10-01T19:53:48.894672Z",
+    "python_version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "platform": "linux",
+    "cpu_count": 12,
+    "memory_total_gb": 15.0,
+    "process_id": 222248
+  },
+  "configuration": {
+    "qdrant_mode": "local",
+    "embedding_provider": "local",
+    "llm_provider": "openai",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "retrieval_k": 5
+  },
+  "benchmarks": {
+    "ingestion": {
+      "validation": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "parsing": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "chunking": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "embedding": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "vector_insertion": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "total": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "iterations": 2,
+      "successful_runs": 0
+    },
+    "retrieval": {
+      "query_embedding_latency_ms": {
+        "mean": 3.353102199616842,
+        "p50": 3.2498279979336075,
+        "p95": 4.246459000569303,
+        "p99": 4.246459000569303
+      },
+      "vector_search_latency_ms": {
+        "mean": 3.602431999752298,
+        "p50": 3.5321690011187457,
+        "p95": 4.158663999987766,
+        "p99": 4.158663999987766
+      },
+      "total_retrieval_latency_ms": {
+        "mean": 6.955945999652613,
+        "p50": 6.779601993912365,
+        "p95": 8.405603002756834,
+        "p99": 8.405603002756834
+      },
+      "iterations_per_query": 5,
+      "total_queries": 2,
+      "total_measurements": 10,
+      "note": "The vector search latency includes an additional query embedding step (so total retrieval latency is not exactly the sum of the two)."
+    }
+  }
+}

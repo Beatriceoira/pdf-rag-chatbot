@@ -1,0 +1,15 @@
+This is a test document for benchmarking the PDF RAG chatbot.
+
+It contains multiple paragraphs to test the chunking and embedding functionality.
+
+The document discusses various topics including:
+1. Introduction to performance benchmarking
+2. Document ingestion pipeline
+3. Vector storage and retrieval
+4. Language model integration
+5. Evaluation metrics
+6. System architecture
+7. Best practices for RAG systems
+8. Future improvements and roadmap
+
+Each section provides detailed information about the respective topic to ensure sufficient content for meaningful benchmarking results.

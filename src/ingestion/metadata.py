@@ -21,11 +21,19 @@ class DocumentMetadata:
     indexed: bool = False
     error: str = ""
 
-    def compute_hash(self, filepath: Path | str) -> str:
-        """Compute SHA-256 hash from file path."""
+    def compute_hash(self, filepath: Path | str | bytes) -> str:
+        """Compute SHA-256 hash from file path, bytes, or BytesIO."""
         import src.utils.hashing as h
 
-        self.file_hash = h.file_hash(filepath)
+        if isinstance(filepath, bytes):
+            self.file_hash = h.bytes_hash(filepath)
+        elif hasattr(filepath, 'getvalue'):  # BytesIO-like object
+            # Reset to beginning and get the value
+            filepath.seek(0)
+            self.file_hash = h.bytes_hash(filepath.getvalue())
+            filepath.seek(0)  # Reset for potential future use
+        else:
+            self.file_hash = h.file_hash(filepath)
         return self.file_hash
 
 
