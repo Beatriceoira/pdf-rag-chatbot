@@ -1,0 +1,42 @@
+# ── Core Dependencies ──────────────────────────────────────────────────────
+streamlit>=1.38
+langchain>=0.3
+langchain-community>=0.3
+langchain-openai>=0.2
+langchain-huggingface>=0.1
+langchain-qdrant>=0.2
+langchain-text-splitters>=0.3
+
+# ── Vector Store ───────────────────────────────────────────────────────────
+qdrant-client>=1.11
+
+# ── PDF & Text Processing ──────────────────────────────────────────────────
+pypdf>=4.3
+
+# ── Embeddings ─────────────────────────────────────────────────────────────
+sentence-transformers>=3.0
+
+# ── LLM Utilities ──────────────────────────────────────────────────────────
+tiktoken>=0.7
+python-dotenv>=1.0
+pydantic-settings>=2.0
+
+# ── Reporting & Evaluation ─────────────────────────────────────────────────
+jinja2>=3.1
+
+# ── Optional: Local LLM via Ollama ─────────────────────────────────────────
+# langchain-ollama>=0.2
+
+# ── Optional: Anthropic ────────────────────────────────────────────────────
+# langchain-anthropic>=0.2
+
+# ── Testing ────────────────────────────────────────────────────────────────
+pytest>=8.0
+pytest-cov>=5.0
+pytest-asyncio>=0.24
+
+# ── Code Quality ───────────────────────────────────────────────────────────
+ruff>=0.8.0
+
+# ── ReportLab (for test fixture PDF generation) ───────────────────────────
+reportlab>=4.0
