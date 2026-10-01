@@ -13,7 +13,7 @@ class RagEvaluator:
 
     def test_grounding(self, question: str, expected_content: str) -> EvaluationResult:
         """Test that the answer contains expected content (groundedness check)."""
-        response = self._runner.chat.ask(question, conversation_id="__grounding_test__")
+        response = self._runner._chat.ask(question, conversation_id="__grounding_test__")
         is_grounded = expected_content.lower() in response.answer.lower()
         return EvaluationResult(
             question=question,
@@ -25,5 +25,5 @@ class RagEvaluator:
 
     def test_no_hallucination(self, question: str, unrelated_topic: str) -> bool:
         """Test that the model doesn't hallucinate about unrelated topics."""
-        response = self._runner.chat.ask(question, conversation_id="__hallucination_test__")
+        response = self._runner._chat.ask(question, conversation_id="__hallucination_test__")
         return unrelated_topic.lower() not in response.answer.lower()
