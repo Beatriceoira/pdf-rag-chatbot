@@ -523,6 +523,3 @@ A: SHA-256 hash of file content is computed and checked against existing documen
 - Set required environment variables (OPENAI_API_KEY, etc.)
 - Use local alternatives for embeddings and LLMs when API keys unavailable
 - Check .env file for proper variable definitions
-
-## Documentation Audit
-This README.md file has been created following an inspection of the actual repository contents. All described features, commands, files, environment variables, metrics, and test results correspond to actual implementation or measured outcomes. No features, commands, files, environment variables, metrics, integrations, screenshots, or configuration options have been invented or speculated upon. The 49-section structure was followed as requested, with each section containing verifiable information from the codebase, benchmark results, or configuration files. Where sections refer to planned or optional features not yet implemented (such as Docker/Kubernetes manifests), this is explicitly stated. The benchmark and evaluation results reflect actual measurements obtained from running the provided scripts on the fixture documents.
