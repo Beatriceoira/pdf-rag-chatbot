@@ -442,9 +442,9 @@ SOFTWARE.
 - Contributors to PyPDFLoader for PDF text extraction
 
 ## Contact Information
-Maintainer: Your Name
-Email: your.email@example.com
-Project URL: https://github.com/your-username/pdf-rag-chatbot
+Maintainer: Beatrice Oira
+Email: schoolbeatriceoira@gmail.com
+Project URL: https://github.com/Beatriceoira/pdf-rag-chatbot
 
 ## References
 - LangChain documentation: https://python.langchain.com/
